@@ -1,0 +1,217 @@
+:root {
+  --cor-primaria1: #8B4513;
+  --cor-primaria2: #D2691E;
+  --cor-primaria3: #CD853F;
+  --cor-secundaria1: #FFD700;
+  --cor-secundaria2: #F5DEB3;
+  --cor-secundaria3: #DEB887;
+  --cor-de-texto1: #2F1B14;
+  --cor-de-texto2: #654321;
+  --cor-de-texto3: #A0522D;
+}
+
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
+
+:root {
+    --primary-color: #5d4037;
+    --secondary-color: #8d6e63;
+    --text-color: #3e2723;
+    --background-color: #f0e6d2;
+    --accent-color: #ffc107;
+}
+
+body {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url('https://www.transparenttextures.com/patterns/dust.png');
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Header */
+.header {
+    font-family: "rye", serif;;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600713783863-718e202537f0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.location-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    border: 3px solid var(--accent-color);
+    border-radius: 5px;
+}
+
+.location-box h3 {
+    margin: 0 0 10px 0;
+    color: var(--accent-color);
+}
+
+.location-box p {
+    margin: 0;
+}
+
+/* Seção de Locais */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.location-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+}
+
+.location-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+.location-card p {
+    margin: 0 0 5px 0;
+}
+
+.footer {
+    background-color: #3e2723;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden; /* Garante que o carrossel não vaze */
+}
+
+/* Estilo para o carrossel no fundo */
+#heroCarousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Coloca o carrossel no fundo */
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+    filter: brightness(50%); /* Escurece a imagem para o texto ser legível */
+}
+
+/* Conteúdo do Hero sobreposto */
+.hero-content {
+    position: relative; /* Mantém o z-index para sobrepor o carrossel */
+    z-index: 2; /* Garante que o conteúdo fique acima do carrossel */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
