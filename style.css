@@ -1,15 +1,3 @@
-:root {
-  --cor-primaria1: #8B4513;
-  --cor-primaria2: #D2691E;
-  --cor-primaria3: #CD853F;
-  --cor-secundaria1: #FFD700;
-  --cor-secundaria2: #F5DEB3;
-  --cor-secundaria3: #DEB887;
-  --cor-de-texto1: #2F1B14;
-  --cor-de-texto2: #654321;
-  --cor-de-texto3: #A0522D;
-}
-
 /* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap');
@@ -29,6 +17,7 @@ body {
     color: var(--text-color);
     background-image: url('https://www.transparenttextures.com/patterns/dust.png');
     line-height: 1.6;
+    padding-top: 100px;
 }
 
 h1, h2, h3, h4 {
@@ -48,6 +37,11 @@ h1, h2, h3, h4 {
     align-items: center;
     border-bottom: 5px solid var(--secondary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -110,64 +104,27 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
-/* Seção de Locais */
+/* Seção de história */
+.hist-container {
+    margin: 10px;
+    padding: 100px;
+    text-align: center;
+}
+
+/* Seção pontos turísticos */
 .container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+    align-items: center;
     text-align: center;
 }
 
-.container h2 {
-    font-size: 3em;
-    color: var(--primary-color);
-}
-
-.locations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.location-card {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 4px solid var(--secondary-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s ease;
-}
-
-.location-card:hover {
-    transform: translateY(-10px);
-}
-
-.location-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border: 2px solid var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.location-card h3 {
-    color: var(--primary-color);
-    font-size: 2em;
-    margin: 0 0 10px 0;
-}
-
-.location-card p {
-    margin: 0 0 5px 0;
-}
-
-.footer {
-    background-color: #3e2723;
+/* footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 16px;
     color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    align-items: center;
+    border-top: 5px solid var(--secondary-color);
 }
 
 @media (max-width: 768px) {
